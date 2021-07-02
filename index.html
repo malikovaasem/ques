@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questionnaire Test</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+            <ul class="menu">
+                
+                <li class="menu_item"><a href="#personal" class="menu_link">Личная информация</a></li>
+                <li class="menu_item"><a href="#experience" class="menu_link">Опыт</a></li>
+                <li class="menu_item"><a href="#js" class="menu_link">Javascript</a></li>
+                <li class="menu_item"><a href="#yourself" class="menu_link">О себе</a></li>
+            </ul>
+            </div>
+            <div class="hamburger">
+                <div class="hamburger_line"></div>
+                <div class="hamburger_line"></div>
+                <div class="hamburger_line"></div>
+            </div>
+        </nav>
+        <hr>
+    </header>
+        <div class="container">
+            <h1>Анкета</h1>
+            <div class="wrapper" id="personal">
+                <img src="icons/personal_info-icon-min.png" alt="personal info" class="wrapper__icon">
+                <div class="wrapper__title">Личная информация</div>
+                <form class="personal__form" id="personal-info-form" action="#">
+                    <div class="personal__form_item">
+                        <input name="name" id="name" type="text" required>
+                        <label class="label" for="name">ФИО</label>
+                    </div>
+                    <div class="personal__form_item age">
+                        <div class="select">
+                            <button id="age" class="select__input" name="age">Год рождения
+                            </button>
+                            <ul id="select__list" class="select__list">
+                            </ul>
+                            <input type="text" name="yaer" value="" class="select__input_hidden">
+                        </div>
+                    </div>
+                    <div class="personal__form_item">
+                        <input name="place" id="place" type="text" required>
+                        <label class="label" for="place">Место проживания</label>
+                    </div>
+                    <div class="personal__form_item">
+                        <input name="skype" id="skype" type="text" required>
+                        <label class="label" for="skype">Skype</label>
+                    </div>
+                    <div class="personal__form_item">
+                        <input name="email" id="email" type="text" required>
+                        <label class="label" for="email">E-mail</label>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="wrapper" id="experience">
+                <img src="icons/experience_icon-min.png" alt="experience" class="wrapper__icon">
+                <div class="wrapper__title">Расскажите о своем опыте</div>
+                <div class="experience__checkbox">
+                    <div class="experience__checkbox_item">
+                        <input class="checkbox" type="checkbox" name="skills[]" value="BEM/OOCSS" id="BEM/OOCSS">
+                        <label for="BEM/OOCSS">БЭМ/OOCSS</label>
+                    </div>
+                    <div class="experience__checkbox_item">
+                        <input class="checkbox" type="checkbox" name="skills[]" value="Stylus/LESS/SASS" id="Stylus/LESS/SASS">
+                        <label for="Stylus/LESS/SASS">Stylus/LESS/SASS</label>
+                    </div>
+                    <div class="experience__checkbox_item">
+                        <input class="checkbox" type="checkbox" name="skills[]" value="Знаком с PHP" id="PHP">
+                        <label for="PHP">Знаком с PHP</label>
+                    </div>
+
+                    <div class="experience__checkbox_item">
+                        <input class="checkbox" type="checkbox" name="skills[]" value="Верстаю семантично" id="coding">
+                        <label for="coding">Верстаю семантично</label>
+                    </div>
+                    <div class="experience__checkbox_item">
+                        <input class="checkbox" type="checkbox" name="skills[]" value="Знаю CMS ModX" id="CMS">
+                        <label for="CMS">Знаю CMS ModX</label>
+                    </div>
+                    <div class="experience__checkbox_item">
+                        <input class="checkbox" type="checkbox" name="skills[]" value="Gulp/Grunt" id="Gulp/Grunt">
+                        <label for="Gulp/Grunt">Gulp/Grunt</label>
+                    </div>
+
+                    <div class="experience__checkbox_item">
+                        <input class="checkbox" type="checkbox" name="skills[]" value="Webpack" id="Webpack">
+                        <label for="Webpack">Webpack</label>
+                    </div>
+                    <div class="experience__checkbox_item">
+                        <input class="checkbox" type="checkbox" name="skills[]" value="JQuery" id="JQuery">
+                        <label for="JQuery">JQuery</label>
+                    </div>
+                    <div class="experience__checkbox_item">
+                        <input class="checkbox" type="checkbox" name="skills[]" value="Использую Git" id="Git">
+                        <label for="Git">Использую Git</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="wrapper js" id="js">
+                <img src="icons/js_icon-min.png" alt="experience" class="wrapper__icon">
+                <div class="wrapper__title">Уровень владения JavaScript</div>
+                <div class="js__range">
+                    <div class="js__range_scale s_0">Не владею</div>
+                    <div class="js__range_scale s_25">Использую готовые <br> решения</div>
+                    <div class="js__range_scale s_50">Использую готовые решения и умею переделывать</div>
+                    <div class="js__range_scale s_100">Пишу сложный JS с нуля</div>
+                    <div class="polzunok" id="slider"></div>
+
+                    <div class="js__range_scale xs_0">Не владею</div>
+                    <div class="js__range_scale xs_25">Использую готовые решения</div>
+                    <div class="js__range_scale xs_50">Использую готовые решения и умею переделывать</div>
+                    <div class="js__range_scale xs_100">Пишу сложный JS с нуля</div>
+                    <input type="text" id="val" name="js" value="">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="wrapper" id="yourself">
+                <img src="icons/yourself_icon-min.png" alt="experience" class="wrapper__icon">
+                <div class="wrapper__title">Расскажите о себе</div>
+                <div class="wrapper__subtitle">Напишите несколько предложений, чем привлекла наша вакансия и что вы ожидаете от работы у нас</div>
+                <textarea form="personal-info-form" class="message" name="message" id="message" required="required" placeholder="Понравилась тем, что..."></textarea>
+                <button form="personal-info-form" class="send_btn" type="submit" name="send">Готово</button>
+                
+            </div>
+        </div>
+
+    <div class="overlay">
+        <div class="modal modal_mini" id="thanks">
+            <div class="modal__close">&times;</div>
+            <form action="#" method="POST" class="consultation-form">
+                <div class="modal__subtitle">Спасибо за Вашу анкету!</div>
+                <div class="modal__descr">Наш менеджер свяжется с Вами как можно скорее</div>
+            </form>
+        </div>
+    </div>
+
+    
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-migrate-3.3.2.min.js" integrity="sha256-Ap4KLoCf1rXb52q+i3p0k2vjBsmownyBTE1EqlRiMwA=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
